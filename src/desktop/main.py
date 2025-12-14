@@ -18,7 +18,7 @@ import sys
 
 # Configuration
 SAMPLE_RATE = 44100
-CHUNK_DURATION = 1.0  # Seconds
+CHUNK_DURATION = 0.5  # Seconds (Reduced for lower latency)
 STEM_NAMES = ["vocals", "drums", "bass", "other"]
 
 class OpenUnmixRealtime:
@@ -46,9 +46,9 @@ def main():
     
     separator = OpenUnmixRealtime()
     
-    # Queues
-    input_queue = queue.Queue(maxsize=5)
-    output_queue = queue.Queue(maxsize=5)
+    # Queues (Small buffer to minimize latency)
+    input_queue = queue.Queue(maxsize=1)
+    output_queue = queue.Queue(maxsize=1)
     
     # Flags
     running = True
