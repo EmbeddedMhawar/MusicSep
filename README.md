@@ -17,6 +17,13 @@ Real-time music separation on Linux using Open-Unmix (PyTorch).
 *   `virtual-cable` (for Desktop App)
 
 ## Installation
-1.  Clone the repo.
-2.  The `demucs.onnx/venv` contains the environment (not included in repo, needs setup).
-    *   *Note: This repo currently assumes a local venv setup.*
+1.  Clone the repo:
+    ```bash
+    git clone https://github.com/EmbeddedMhawar/MusicSep.git
+    cd MusicSep
+    ```
+2.  Run the setup script:
+    ```bash
+    ./setup.sh
+    ```
+    This will create the virtual environment and install all dependencies.
