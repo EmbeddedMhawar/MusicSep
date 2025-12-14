@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# Models
+*.pth
+*.onnx
+models/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Large Folders
+demucs.onnx/venv/
+demucs.onnx/vendor/
+demucs.onnx/demucs-for-onnx/
+demucs.onnx/umx_onnx/
+demucs.onnx/__pycache__/
+src/extension/extension/node_modules/
